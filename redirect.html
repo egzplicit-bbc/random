@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style type="text/css">
+            form {
+                visibility: none;
+            }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('input[name=keywords]').val(window.location.hash.substring(1));
+                $('form').submit();
+            });
+        </script>
+    </head>
+    <body>
+        <form id="search" action="http://careerssearch.bbc.co.uk/jobs/search" method="post">
+            <input id="keywords" value="mybbc" name="keywords" type="text">
+            <button type="submit" class="btn btn-alt-highlight" id="submitBtn">Search Jobs <i class="icon-search icon-white"></i></button>
+        </form>
+    </body>
+</html>
